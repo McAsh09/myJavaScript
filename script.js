@@ -1,4 +1,13 @@
-function myFunction()
+function createParagraph()
 {
-    document.getElementById("prac").innerHTML = "Welcome to my playground!";
+    let para = document.createElement('p');
+    para.textContent = 'You Clicked me!';
+    document.body.appendChild(para);
+}
+
+const buttons = document.querySelectorAll('button');
+
+for(let i=0; i<buttons.length; i++)
+{
+    buttons[i].addEventListener('click',createParagraph);
 }
